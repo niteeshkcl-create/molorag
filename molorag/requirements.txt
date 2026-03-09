@@ -1,0 +1,7 @@
+torch
+transformers
+numpy
+pymupdf
+networkx
+pillow
+tqdm

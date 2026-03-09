@@ -11,9 +11,12 @@ from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from datasets import load_dataset
 
 # --- Configuration ---
+# Configuration
 MODEL_ID = "Qwen/Qwen2.5-VL-3B-Instruct"
-DATA_FILE = "/Users/niteeshkumar/Documents/molorag/molorag_plus_v2/training_data_qwen.jsonl"
-OUTPUT_DIR = "/Users/niteeshkumar/Documents/molorag/molorag_plus_v2/outputs"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# Expect training data in the same directory
+DATA_FILE = os.path.join(SCRIPT_DIR, "training_data_qwen.jsonl")
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "outputs")
 
 # MacBook/MPS Setup
 DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"

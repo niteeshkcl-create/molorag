@@ -14,9 +14,14 @@ import fitz  # PyMuPDF
 TEACHER_MODEL_ID = "Qwen/Qwen2.5-VL-3B-Instruct" 
 DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
 
-BASE_PATH = "/Users/niteeshkumar/Documents/molorag"
-DATASET_DIR = os.path.join(BASE_PATH, "molorag_project/repo_molorag/dataset")
-OUTPUT_FILE = os.path.join(BASE_PATH, "molorag_plus_v2/training_data_qwen.jsonl")
+# Local Paths
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_PATH = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+# The script expects a 'dataset' folder in the current directory or the parent
+DATASET_DIR = os.path.join(SCRIPT_DIR, "dataset")
+if not os.path.exists(DATASET_DIR):
+    DATASET_DIR = os.path.join(BASE_PATH, "dataset")
+OUTPUT_FILE = os.path.join(SCRIPT_DIR, "training_data_qwen.jsonl")
 
 # Datasets to sample from
 DATASETS = [

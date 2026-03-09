@@ -14,9 +14,13 @@ from tqdm import tqdm
 
 # --- 1. MacBook Optimization & Paths ---
 DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
-BASE_PATH = "/Users/niteeshkumar/Documents/molorag"
-REPO_PATH = os.path.join(BASE_PATH, "molorag_project/repo_molorag")
-DATASET_DIR = os.path.join(REPO_PATH, "dataset")
+# Local Workspace Paths
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_PATH = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+# The script expects a 'dataset' folder in the current directory or the parent
+DATASET_DIR = os.path.join(SCRIPT_DIR, "dataset")
+if not os.path.exists(DATASET_DIR):
+    DATASET_DIR = os.path.join(BASE_PATH, "dataset")
 
 DATASETS = [
     ("MMLongBench", os.path.join(DATASET_DIR, "samples_MMLong.json"), os.path.join(DATASET_DIR, "MMLong")),
