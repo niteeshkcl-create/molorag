@@ -23,10 +23,8 @@ pip install -r requirements.txt
 
 ## 2. Data Download Instructions
 The system uses the **MMLongBench-Doc** and **LongDocURL** datasets.
-1. Download the PDFs and question-answer pairs from the [official MoLoRAG repository](https://github.com/WxxShirley/MoLoRAG).
-2. Create a `dataset/` folder in this directory.
-3. Place the PDF files in `dataset/MMLong` and `dataset/LongDocURL`.
-4. Place the metadata files `samples_MMLong.json` and `samples_LongDocURL.json` in the `dataset/` folder.
+1. Metadata and sample PDFs are already included in the `dataset/` folder at the root of the repository.
+2. For the full dataset (6.5GB+), download the PDFs from the [official repository](https://github.com/WxxShirley/MoLoRAG) and place them in `dataset/MMLong` and `dataset/LongDocURL`.
 
 ## 3. Preprocessing (Indexing)
 To reproduce the document graph and embeddings:

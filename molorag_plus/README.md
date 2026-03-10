@@ -21,10 +21,9 @@ pip install -r requirements.txt
 ```
 
 ## 2. Data Download Instructions
-The system uses the **MMLongBench-Doc** and **LongDocURL** datasets for distillation.
-1. Download the PDFs from the [official MoLoRAG repository](https://github.com/WxxShirley/MoLoRAG).
-2. Create a `dataset/` folder in this directory.
-3. Place the PDF files in `dataset/MMLong` and `dataset/LongDocURL`.
+The system uses the **MMLongBench-Doc** and **LongDocURL** datasets for distillation and evaluation.
+1. Metadata and sample PDFs are already included in the `dataset/` folder at the root of the repository.
+2. For the full dataset (6.5GB+), download the PDFs from the [official repository](https://github.com/WxxShirley/MoLoRAG) and place them in `dataset/MMLong` and `dataset/LongDocURL`.
 
 ## 3. Data Generation (Distillation)
 To generate the training triplets (Question, Image, Score) using a Qwen teacher model:
