@@ -2,7 +2,7 @@
 
 This repository contains the reproduction efforts for the **MoLoRAG** (Multi-modal Long-document RAG) paper. The goal of this project is to evaluate the performance of multi-modal retrieval (M3DocRAG) against traditional text-based RAG on long-document benchmarks such as **MMLongBench** and **LongDocURL**.
 
-## 📁 Repository Structure
+## Repository Structure
 
 A clean organization for the reproduction efforts:
 
@@ -21,7 +21,7 @@ MoLoRAG_Reproduction/
 └── README.md              # This file
 ```
 
-## 📊 Reproduction Results
+## Reproduction Results
 
 ### 1. QA Accuracy (%)
 | Dataset | Text RAG (Qwen-7B) | M3DocRAG (MoLoRAG) |
@@ -38,7 +38,7 @@ MoLoRAG_Reproduction/
 | **3** | **M3DocRAG** | 54.13 | 58.23 |
 | | **TextRAG** | 37.13 | 54.12 |
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 1. Clone the repository:
@@ -58,7 +58,7 @@ MoLoRAG_Reproduction/
   python scripts/run_mini_experiment.py
   ```
 
-## 🛠️ Technical Fixes
+## Technical Fixes
 During reproduction, several stability fixes were implemented:
 - **FP16 Stability**: Enforced FP16 loading to prevent `bitsandbytes` quantization errors on T4 GPUs.
 - **Device Management**: Implemented `device_map="auto"` to resolve "meta tensor" synchronization issues.
