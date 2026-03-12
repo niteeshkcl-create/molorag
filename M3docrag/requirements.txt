@@ -1,0 +1,32 @@
+# M3DocRAG Notebook Dependencies
+# Core ML
+torch
+torchvision
+transformers
+accelerate
+bitsandbytes
+peft
+qwen_vl_utils
+sentence-transformers
+huggingface_hub
+
+# Retrieval & Document Processing
+faiss-cpu
+pypdf
+PyMuPDF
+pdf2image
+colpali_engine
+langchain
+langchain-huggingface
+langchain-community
+
+# Utilities
+tqdm
+requests
+pillow
+numpy
+pandas
+scikit-learn
+ipykernel
+matplotlib
+poppler-utils-binary # Note: requires 'apt-get install poppler-utils' on Linux/Colab

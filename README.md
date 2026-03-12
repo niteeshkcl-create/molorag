@@ -53,8 +53,9 @@ Official reproduction scripts for paper baseline results.
 - **Evaluation**: `python baseline/main_eval.py --dataset MMLong`
 
 ### [M3docrag](./M3docrag)
-Collection of Jupyter notebooks for M3DocRAG experiments and baseline testing.
-- Includes baseline experiments, local testing, and final reproduction notebooks.
+Collection of Jupyter notebooks and standalone scripts for M3DocRAG experiments and baseline testing.
+- **Preprocessing**: `python M3docrag/index_local.py --dataset MMLong`
+- **Evaluation**: `python M3docrag/eval_local.py --dataset MMLong --top_k 3`
 
 ## 4. Models Used
 - **Vision-Language Model**: `Qwen/Qwen2.5-VL-3B-Instruct`
