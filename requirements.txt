@@ -1,0 +1,15 @@
+transformers
+torch
+torchvision
+accelerate
+peft
+bitsandbytes
+colpali-engine
+pdf2image
+pillow
+tqdm
+numpy
+pandas
+scikit-learn
+openai
+requests
