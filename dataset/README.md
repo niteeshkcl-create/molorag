@@ -9,7 +9,7 @@ MoLoRAG is evaluated on long-form, multi-modal documents. The two primary datase
 - **Source**: Collected from a wide range of PDF documents including academic papers, technical manuals, and business reports.
 - **Total Samples**: 1,000+ question-answer pairs (evaluated on the first 5 for local testing).
 - **Format**: Multiple-choice and open-ended questions targeting specific pages or logical relationships across the document.
-- **Logical Complexity**: Requires a "Hierarchical Traversal" strategy to follow logical links (e.g., "See Figure 2", "Continued on Page 45").
+- **Logical Complexity**: Requires a "Hierarchical Traversal" strategy to follow logical links.
 
 ### B. LongDocURL
 - **Source**: Documents with complex layouts, tables, and diverse URL-based references.
